@@ -1,0 +1,76 @@
+<html>
+<head>
+<!-- Styles -->
+<style>
+#chart_div {
+    width: 50%;
+    height:100%;
+    max-width:50%;
+    float: left;
+}
+#chart_results {
+    width: 50%;
+    height:100%;
+    max-width:50%;
+    float: right;
+}
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<!-- HTML -->
+<div id="chart_div"></div>
+<div id="chart_results"></div>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+<script src="index.js"></script>
+<script id="our-template" type="text/x-handlebars-template">
+  <div>
+    <h1>Data for {{ name }}</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Value</th>
+        </thead>
+        <tbody>
+            {{#each children}}
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ value }}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+  </div>
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
